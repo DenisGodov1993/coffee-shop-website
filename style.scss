@@ -67,10 +67,6 @@ a {
     background-repeat: no-repeat;
     background-position: calc(100% + 429px) calc(100% + 42px);
 }
-// background-image: url(img/board.png), url(img/grains.png), url(img/coffee.svg), url(img/cookie.svg), url(img/cinnabon.svg);
-//     background-repeat: no-repeat;
-//     background-position: calc(100% + 429px) calc(100% + 42px), 1068px 59px, 655px 32px, 661px 369px, 928px 201px;
-// }
 
 .main-content {
     width: 586px;
@@ -167,17 +163,79 @@ a {
 
 .about-us {
     height: 851px;
-    background: rgb(246, 245, 244);
+    background: rgb(54, 162, 212);
+
+    &__title {
+        color: rgb(69, 64, 61);
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 59px;
+        padding-top: 64px;
+        padding-bottom: 48px;
+    }
+
+    &__content-box {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 32px;
+    }
+
+    &__content {
+        grid-column: span 6;
+        border-radius: 24px 24px 24px 0px;
+        box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.14);
+        background: rgb(255, 255, 255);
+        display: flex;
+        width: 584px;
+        height: 292px;
+        overflow: hidden;
+        cursor: pointer;
+    }
+
+    &__content:hover &__content-img {
+        transform: scale(1.1);
+    }
+
+    &__content-img {
+        border-radius: 24px 0px 0px 0px;
+        min-width: 292px;
+        object-fit: cover;
+        transition: transform 0.3s; 
+    }
+  
+    &__indent {
+        display: block; 
+        margin-top: 10px; 
+    }
+
+    &__content-text {
+        padding: 20px;
+    }
+
+    &__content-text1 {
+        color: rgb(69, 64, 61);
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 29px;
+        padding-bottom: 14px;
+    }
+
+    &__content-text2 {
+        color: rgb(69, 64, 61);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+    }
 }
 
 .menu {
     height: 1087px;
-    background: rgb(246, 245, 244);
+    background: rgb(238, 123, 8);
 }
 
 .reviews {
     height: 683px;
-    background: rgb(246, 245, 244);
+    background: rgb(243, 156, 221);
 }
 
 .contacts {
